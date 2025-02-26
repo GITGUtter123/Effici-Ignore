@@ -1,11 +1,19 @@
 {
-  "manifest_version": 3,
-  "name": "Bypass X-Frame-Options & CSP",
+  "manifest_version": 2,
+  "name": "Bypass Iframe Restrictions",
   "version": "1.0",
   "description": "Removes X-Frame-Options and Content-Security-Policy headers to allow embedding in iframes.",
-  "permissions": ["webRequest", "webRequestBlocking", "declarativeNetRequest", "declarativeNetRequestWithHostAccess"],
-  "host_permissions": ["<all_urls>"],
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "host_permissions",
+    "<all_urls>"
+  ],
   "background": {
-    "service_worker": "background.js"
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_popup": "popup.html"
   }
 }
