@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Bypass X-Frame-Options & CSP",
+  "version": "1.0",
+  "description": "Removes X-Frame-Options and Content-Security-Policy headers to allow embedding in iframes.",
+  "permissions": ["webRequest", "webRequestBlocking", "declarativeNetRequest", "declarativeNetRequestWithHostAccess"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
